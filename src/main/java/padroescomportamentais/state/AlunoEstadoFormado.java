@@ -13,23 +13,23 @@ public class AlunoEstadoFormado implements AlunoEstado {
     }
 
     public String matricular(Aluno aluno) {
-        return "Matrícula não pode ser realizada pois o aluno está formado";
+        return "Matrícula não realizada";
     }
 
     public String formar(Aluno aluno) {
-        return "Formatura não pode ser realizada pois o aluno está formado";
+        return "Formatura não realizada";
     }
 
     public String trancar(Aluno aluno) {
-        return "Trancamento não pode ser realizado pois o aluno está formado";
+        return "Trancamento não realizado";
     }
 
     public String jubilar(Aluno aluno) {
-        return "Jubilamento não pode ser realizado pois o aluno está formado";
+        return "Jubilamento não realizado";
     }
 
     public String evadir(Aluno aluno) {
-        return "Evasão não pode ser realizada pois o aluno está formado";
+        return "Evasão não realizada";
     }
 
 }

@@ -13,26 +13,27 @@ public class AlunoEstadoMatriculado implements AlunoEstado {
     }
     
     public String matricular(Aluno aluno) {
-        return "Matrícula não pode ser efetuada uma vez que o aluno está matriculado";
+        return "Matrícula não realizada";
     }
     
     public String formar(Aluno aluno) {
         aluno.setEstado(AlunoEstadoFormado.getInstance());
-        return "Formatura pode ser realizada";
+        return "Formatura realizada";
     }
     
     public String trancar(Aluno aluno) {
         aluno.setEstado(AlunoEstadoTrancado.getInstance());
-        return "Trancamento pode ser realizado";        
+        return "Trancamento realizado";
     }
     
     public String jubilar(Aluno aluno) {
         aluno.setEstado(AlunoEstadoJubilado.getInstance());
-        return "Jubilamento pode ser realizado";           
+        return "Jubilamento realizado";
     }
     
     public String evadir(Aluno aluno) {
         aluno.setEstado(AlunoEstadoEvadido.getInstance());
-        return "Evasão pode ser realizada";        
+        return "Evasão realizada";
     }
+
 }

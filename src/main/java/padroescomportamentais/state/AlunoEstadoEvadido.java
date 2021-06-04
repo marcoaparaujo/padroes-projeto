@@ -13,24 +13,25 @@ public class AlunoEstadoEvadido implements AlunoEstado {
     }
     
     public String matricular(Aluno aluno) {
-        return "Matrícula não pode ser realizada pois o aluno está evadido";
+        return "Matrícula não realizada";
     }
     
    public String formar(Aluno aluno) {
-        return "Formatura não pode ser realizada pois o aluno está evadido";
+        return "Formatura não realizada";
     }
    
    public String trancar(Aluno aluno) {
-         return "Trancamento não pode ser realizado pois o aluno está evadido";
+         return "Trancamento não realizado";
    }
      
    public String jubilar(Aluno aluno) {
          aluno.setEstado(AlunoEstadoJubilado.getInstance());
-         return "Jubilamento pode ser realizado";
+         return "Jubilamento realizado";
    }
    
    public String evadir(Aluno aluno) {
-         return "Evasão não pode ser realizada pois o aluno está evadido";       
+         return "Evasão não realizada";
    }
+
 }
 

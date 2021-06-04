@@ -18,16 +18,16 @@ public class AlunoEstadoTrancado implements AlunoEstado {
     }
 
     public String formar(Aluno aluno) {
-        return "Formatura não pode ser realizada pois o aluno está trancado";
+        return "Formatura não realizada";
     }
 
     public String trancar(Aluno aluno) {
-        return "Trancamento não pode ser realizado pois o aluno está trancado";
+        return "Trancamento não realizado";
     }
 
     public String jubilar(Aluno aluno) {
         aluno.setEstado(AlunoEstadoJubilado.getInstance());
-        return "Jubilamento ealizado";
+        return "Jubilamento realizado";
     }
 
     public String evadir(Aluno aluno) {
