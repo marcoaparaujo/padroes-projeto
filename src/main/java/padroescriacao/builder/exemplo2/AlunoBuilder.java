@@ -11,8 +11,11 @@ public class AlunoBuilder {
     }
 
     public Aluno build() {
-        if (aluno.getMatricula() == 0 || aluno.getNome().equals("")) {
-            return null;
+        if (aluno.getMatricula() == 0) {
+            throw new IllegalArgumentException("Matrícula inválida");
+        }
+        if (aluno.getNome().equals("")) {
+            throw new IllegalArgumentException("Nome inválido");
         }
         return aluno;
     }
