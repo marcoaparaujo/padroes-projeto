@@ -8,14 +8,12 @@ class ParametrosTest {
 
     @Test
     public void deveRetornarNomeEscola() {
-
         Parametros.getInstance().setNomeEscola("Escola 1");
         assertEquals("Escola 1", Parametros.getInstance().getNomeEscola());
     }
 
     @Test
     public void deveRetornarUsuarioLogado() {
-
         Parametros.getInstance().setUsuarioLogado("Usuario 1");
         assertEquals("Usuario 1", Parametros.getInstance().getUsuarioLogado());
     }

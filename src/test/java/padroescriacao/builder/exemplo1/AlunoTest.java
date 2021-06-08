@@ -12,7 +12,7 @@ class AlunoTest {
         aluno.setCep("12346-789")
                 .setEmail("aluno1@email.com")
                 .setCelular("1234-5678")
-                .getNomeMae("Mae do aluno 1");
+                .setNomeMae("Mae do aluno 1");
 
         assertNotNull(aluno);
     }

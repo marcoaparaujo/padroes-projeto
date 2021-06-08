@@ -1,7 +1,5 @@
 package padroescriacao.singleton;
 
-import padroescomportamentais.state.AlunoEstadoEvadido;
-
 public class Parametros {
 
     private Parametros() {};
