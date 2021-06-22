@@ -46,6 +46,12 @@ public class AlunoTest {
         assertEquals("Evasão realizada", aluno.evadir());
     }
 
+    @Test
+    public void deveTransferirAlunoMatriculado() {
+        aluno.setEstado(AlunoEstadoMatriculado.getInstance());
+        assertEquals("Transferência realizada", aluno.transferir());
+    }
+
     // Aluno trancado
 
     @Test
@@ -76,6 +82,12 @@ public class AlunoTest {
     public void deveEvadirAlunoTrancado() {
         aluno.setEstado(AlunoEstadoTrancado.getInstance());
         assertEquals("Evasão realizada", aluno.evadir());
+    }
+
+    @Test
+    public void naoDeveTransferirAlunoTrancado() {
+        aluno.setEstado(AlunoEstadoTrancado.getInstance());
+        assertEquals("Transferência não realizada", aluno.transferir());
     }
 
     // Aluno formado
@@ -110,6 +122,12 @@ public class AlunoTest {
         assertEquals("Evasão não realizada", aluno.evadir());
     }
 
+    @Test
+    public void naoDeveTransferirAlunoFormado() {
+        aluno.setEstado(AlunoEstadoFormado.getInstance());
+        assertEquals("Transferência não realizada", aluno.transferir());
+    }
+
     // Aluno jubilado
 
     @Test
@@ -140,6 +158,12 @@ public class AlunoTest {
     public void naoDeveEvadirAlunoJubilado() {
         aluno.setEstado(AlunoEstadoJubilado.getInstance());
         assertEquals("Evasão não realizada", aluno.evadir());
+    }
+
+    @Test
+    public void naoDeveTransferirAlunoJubilado() {
+        aluno.setEstado(AlunoEstadoJubilado.getInstance());
+        assertEquals("Transferência não realizada", aluno.transferir());
     }
 
     // Aluno evadido
@@ -173,5 +197,50 @@ public class AlunoTest {
         aluno.setEstado(AlunoEstadoEvadido.getInstance());
         assertEquals("Evasão não realizada", aluno.evadir());
     }
+
+    @Test
+    public void naoDeveTransferirAlunoEvadido() {
+        aluno.setEstado(AlunoEstadoEvadido.getInstance());
+        assertEquals("Transferência não realizada", aluno.transferir());
+    }
+
+    // Aluno transferido
+
+    @Test
+    public void naoDeveMatricularAlunoTransferido() {
+        aluno.setEstado(AlunoEstadoTransferido.getInstance());
+        assertEquals("Matrícula não realizada", aluno.matricular());
+    }
+
+    @Test
+    public void naoDeveFormarAlunoTransferido() {
+        aluno.setEstado(AlunoEstadoTransferido.getInstance());
+        assertEquals("Formatura não realizada", aluno.formar());
+    }
+
+    @Test
+    public void naoDeveTrancarAlunoTransferido() {
+        aluno.setEstado(AlunoEstadoTransferido.getInstance());
+        assertEquals("Trancamento não realizado", aluno.trancar());
+    }
+
+    @Test
+    public void naoDeveJubilarAlunoTransferido() {
+        aluno.setEstado(AlunoEstadoTransferido.getInstance());
+        assertEquals("Jubilamento não realizado", aluno.jubilar());
+    }
+
+    @Test
+    public void naoDeveEvadirAlunoTransferido() {
+        aluno.setEstado(AlunoEstadoTransferido.getInstance());
+        assertEquals("Evasão não realizada", aluno.evadir());
+    }
+
+    @Test
+    public void naoDeveTransferirAlunoTransferido() {
+        aluno.setEstado(AlunoEstadoTransferido.getInstance());
+        assertEquals("Transferência não realizada", aluno.transferir());
+    }
+
 
 }

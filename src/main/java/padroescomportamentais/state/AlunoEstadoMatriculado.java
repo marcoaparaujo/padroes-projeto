@@ -36,4 +36,9 @@ public class AlunoEstadoMatriculado implements AlunoEstado {
         return "Evasão realizada";
     }
 
+    public String transferir(Aluno aluno) {
+        aluno.setEstado(AlunoEstadoTransferido.getInstance());
+        return "Transferência realizada";
+    }
+
 }

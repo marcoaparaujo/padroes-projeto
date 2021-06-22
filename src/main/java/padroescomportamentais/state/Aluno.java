@@ -32,7 +32,11 @@ public class Aluno {
     public String evadir() {
         return estado.evadir(this);
     }
-    
+
+    public String transferir() {
+        return estado.transferir(this);
+    }
+
     public String getNomeEstado() {
         return estado.getEstado();
     }

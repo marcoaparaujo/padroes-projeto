@@ -1,15 +1,15 @@
 package padroescomportamentais.state;
 
-public class AlunoEstadoFormado implements AlunoEstado {
+public class AlunoEstadoTransferido implements AlunoEstado {
 
-    private AlunoEstadoFormado() {};
-    private static AlunoEstadoFormado instance = new AlunoEstadoFormado();
-    public static AlunoEstadoFormado getInstance() {
+    private AlunoEstadoTransferido() {};
+    private static AlunoEstadoTransferido instance = new AlunoEstadoTransferido();
+    public static AlunoEstadoTransferido getInstance() {
         return instance;
     }
 
     public String getEstado() {
-        return "Formado";
+        return "Transferido";
     }
 
     public String matricular(Aluno aluno) {
@@ -35,5 +35,4 @@ public class AlunoEstadoFormado implements AlunoEstado {
     public String transferir(Aluno aluno) {
         return "Transferência não realizada";
     }
-
 }

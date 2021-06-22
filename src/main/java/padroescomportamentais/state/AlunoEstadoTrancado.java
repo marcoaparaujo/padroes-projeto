@@ -35,4 +35,8 @@ public class AlunoEstadoTrancado implements AlunoEstado {
         return "Evasão realizada";
     }
 
+    public String transferir(Aluno aluno) {
+        return "Transferência não realizada";
+    }
+
 }

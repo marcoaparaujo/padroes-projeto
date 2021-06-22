@@ -13,5 +13,7 @@ public interface AlunoEstado {
     String jubilar(Aluno aluno);
     
     String evadir(Aluno aluno);
+
+    String transferir(Aluno aluno);
     
 }
