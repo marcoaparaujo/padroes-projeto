@@ -6,14 +6,14 @@ import java.util.Observer;
 public class Aluno implements Observer {
 
     private String nome;
-    private String notificacao;
+    private String ultimaNotificacao;
 
     public Aluno(String nome) {
         this.nome = nome;
     }
 
-    public String getNotificacao() {
-        return this.notificacao;
+    public String getUltimaNotificacao() {
+        return this.ultimaNotificacao;
     }
 
     public void matricular(Turma turma) {
@@ -21,7 +21,7 @@ public class Aluno implements Observer {
     }
 
     public void update(Observable turma, Object arg1) {
-        this.notificacao = this.nome + ", nota lançada na " + turma.toString();
+        this.ultimaNotificacao = this.nome + ", nota lançada na " + turma.toString();
     //    System.out.println(this.notificacao);
     }
 }

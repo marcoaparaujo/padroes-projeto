@@ -12,7 +12,7 @@ class AlunoTest {
         Aluno aluno = new Aluno("Aluno 1");
         aluno.matricular(turma);
         turma.lancarNotas();
-        assertEquals("Aluno 1, nota lançada na Turma{ano=2021, semestre=1, nomeDisciplina='Algoritmos', nomeTurma='A'}", aluno.getNotificacao());
+        assertEquals("Aluno 1, nota lançada na Turma{ano=2021, semestre=1, nomeDisciplina='Algoritmos', nomeTurma='A'}", aluno.getUltimaNotificacao());
     }
 
     @Test
@@ -23,8 +23,8 @@ class AlunoTest {
         aluno1.matricular(turma);
         aluno2.matricular(turma);
         turma.lancarNotas();
-        assertEquals("Aluno 1, nota lançada na Turma{ano=2021, semestre=1, nomeDisciplina='Algoritmos', nomeTurma='A'}", aluno1.getNotificacao());
-        assertEquals("Aluno 2, nota lançada na Turma{ano=2021, semestre=1, nomeDisciplina='Algoritmos', nomeTurma='A'}", aluno2.getNotificacao());
+        assertEquals("Aluno 1, nota lançada na Turma{ano=2021, semestre=1, nomeDisciplina='Algoritmos', nomeTurma='A'}", aluno1.getUltimaNotificacao());
+        assertEquals("Aluno 2, nota lançada na Turma{ano=2021, semestre=1, nomeDisciplina='Algoritmos', nomeTurma='A'}", aluno2.getUltimaNotificacao());
     }
 
     @Test
@@ -32,7 +32,7 @@ class AlunoTest {
         Turma turma = new Turma(2021, 1, "Algoritmos", "A");
         Aluno aluno = new Aluno("Aluno 1");
         turma.lancarNotas();
-        assertEquals(null, aluno.getNotificacao());
+        assertEquals(null, aluno.getUltimaNotificacao());
     }
 
     @Test
@@ -44,7 +44,7 @@ class AlunoTest {
         aluno1.matricular(turmaA);
         aluno2.matricular(turmaB);
         turmaA.lancarNotas();
-        assertEquals("Aluno 1, nota lançada na Turma{ano=2021, semestre=1, nomeDisciplina='Algoritmos', nomeTurma='A'}", aluno1.getNotificacao());
-        assertEquals(null, aluno2.getNotificacao());
+        assertEquals("Aluno 1, nota lançada na Turma{ano=2021, semestre=1, nomeDisciplina='Algoritmos', nomeTurma='A'}", aluno1.getUltimaNotificacao());
+        assertEquals(null, aluno2.getUltimaNotificacao());
     }
 }
