@@ -38,7 +38,7 @@ class AlunoTest {
     @Test
     void deveNotificarAlunoTurmaA() {
         Turma turmaA = new Turma(2021, 1, "Algoritmos", "A");
-        Turma turmaB = new Turma(2021, 1, "Algoritmos", "A");
+        Turma turmaB = new Turma(2021, 1, "Algoritmos", "B");
         Aluno aluno1 = new Aluno("Aluno 1");
         Aluno aluno2 = new Aluno("Aluno 2");
         aluno1.matricular(turmaA);

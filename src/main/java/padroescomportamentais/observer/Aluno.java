@@ -22,6 +22,6 @@ public class Aluno implements Observer {
 
     public void update(Observable turma, Object arg1) {
         this.ultimaNotificacao = this.nome + ", nota lançada na " + turma.toString();
-    //    System.out.println(this.notificacao);
+        // System.out.println(this.ultimaNotificacao);
     }
 }
