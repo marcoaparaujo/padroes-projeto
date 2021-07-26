@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AlunoTest {
 
     @Test
-    void deveRetornarPendenciaBiblioteca() {
+    void deveRetornarPendenciaBibliotecaFormatura() {
         Aluno aluno = new Aluno();
         Biblioteca.getInstancia().addAlunoPendente(aluno);
 
@@ -15,7 +15,7 @@ class AlunoTest {
     }
 
     @Test
-    void deveRetornarPendenciaSecretaria() {
+    void deveRetornarPendenciaSecretariaFormatura() {
         Aluno aluno = new Aluno();
         Secretaria.getInstancia().addAlunoPendente(aluno);
 
@@ -23,7 +23,7 @@ class AlunoTest {
     }
 
     @Test
-    void deveRetornarPendenciaFinanceiro() {
+    void deveRetornarPendenciaFinanceiroFormatura() {
         Aluno aluno = new Aluno();
         Financeiro.getInstancia().addAlunoPendente(aluno);
 
@@ -31,7 +31,7 @@ class AlunoTest {
     }
 
     @Test
-    void deveRetornarAlunoSemPendencia() {
+    void deveRetornarAlunoSemPendenciaFormatura() {
         Aluno aluno = new Aluno();
 
         assertEquals(true, aluno.formar());
