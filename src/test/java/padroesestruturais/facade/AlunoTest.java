@@ -11,7 +11,7 @@ class AlunoTest {
         Aluno aluno = new Aluno();
         Biblioteca.getInstancia().addAlunoPendente(aluno);
 
-        assertEquals(false, FormaturaFacade.verificarPendencias(aluno));
+        assertEquals(false, aluno.formar());
     }
 
     @Test
@@ -19,7 +19,7 @@ class AlunoTest {
         Aluno aluno = new Aluno();
         Secretaria.getInstancia().addAlunoPendente(aluno);
 
-        assertEquals(false, FormaturaFacade.verificarPendencias(aluno));
+        assertEquals(false, aluno.formar());
     }
 
     @Test
@@ -27,14 +27,14 @@ class AlunoTest {
         Aluno aluno = new Aluno();
         Financeiro.getInstancia().addAlunoPendente(aluno);
 
-        assertEquals(false, FormaturaFacade.verificarPendencias(aluno));
+        assertEquals(false, aluno.formar());
     }
 
     @Test
     void deveRetornarAlunoSemPendencia() {
         Aluno aluno = new Aluno();
 
-        assertEquals(true, FormaturaFacade.verificarPendencias(aluno));
+        assertEquals(true, aluno.formar());
     }
 
 }

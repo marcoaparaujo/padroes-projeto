@@ -1,8 +1,8 @@
 package padroesestruturais.facade;
 
-public class FormaturaFacade {
+public class AlunoFacade {
 
-    public static boolean verificarPendencias(Aluno aluno) {
+    public static boolean verificarPendenciasFormatura(Aluno aluno) {
         if (Secretaria.getInstancia().verificarAlunoComPendencia(aluno)) {
             return false;
         }
