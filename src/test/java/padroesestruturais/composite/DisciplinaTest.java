@@ -37,7 +37,7 @@ class DisciplinaTest {
     }
 
     @Test
-    void deveRetornarExecacaoParaEmentaSemDisciplina() {
+    void deveRetornarExecacaoDisciplinaSemEmenta() {
         try {
             Disciplina disciplina = new Disciplina();
             disciplina.getEmenta();
