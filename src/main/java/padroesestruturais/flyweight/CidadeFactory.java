@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CidadeFactory {
-    static Map<String, Cidade> cidades = new HashMap<>();
+    private static Map<String, Cidade> cidades = new HashMap<>();
 
     public static Cidade getCidade(String nome, String uf) {
         Cidade cidade = cidades.get(nome);
