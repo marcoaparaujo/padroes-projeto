@@ -10,11 +10,11 @@ public class Cidade {
         this.uf = uf;
     }
 
-    public String obterAluno(String nomeAluno) {
-        return "Aluno{" +
-                "nome='" + nomeAluno + '\'' +
-                ", cidade='" + nome + '\'' +
-                ", uf='" + uf + '\'' +
-                '}';
+    public String getNome() {
+        return nome;
+    }
+
+    public String getUf() {
+        return uf;
     }
 }

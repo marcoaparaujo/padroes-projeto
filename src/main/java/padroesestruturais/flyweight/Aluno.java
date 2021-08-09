@@ -11,6 +11,10 @@ public class Aluno {
     }
 
     public String obterAluno() {
-        return cidadeResidencia.obterAluno(nome);
+        return "Aluno{" +
+                "nome='" + this.nome + '\'' +
+                ", cidade='" + cidadeResidencia.getNome() + '\'' +
+                ", uf='" + cidadeResidencia.getUf() + '\'' +
+                '}';
     }
 }
