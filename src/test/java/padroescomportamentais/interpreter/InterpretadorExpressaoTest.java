@@ -37,17 +37,6 @@ class InterpretadorExpressaoTest {
     }
 
     @Test
-    void deveCalcularExpressaoComFormula() {
-        String expressao = "nota1 * 2 + nota2";
-
-        expressao = expressao.replace("nota1", "2");
-        expressao = expressao.replace("nota2", "5");
-
-        InterpretadorExpressao interpretador = new InterpretadorExpressoesAritmeticas(expressao);
-        assertEquals(9.0, interpretador.interpretar());
-    }
-
-    @Test
     void deveRetonarExcecaoElementoInvalido() {
         try {
             InterpretadorExpressao interpretador = new InterpretadorExpressoesAritmeticas("2 ^ 2");
