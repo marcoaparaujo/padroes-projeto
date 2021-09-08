@@ -1,4 +1,4 @@
-package padroescriacao.builder.exemplo2;
+package padroescriacao.builder;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package padroescriacao.builder.exemplo2;
+package padroescriacao.builder;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
