@@ -12,7 +12,7 @@ public abstract class Setor {
     }
 
     public boolean verificarAlunoComPendencia(Aluno aluno) {
-        return alunosComPendencia.contains(aluno);
+        return this.alunosComPendencia.contains(aluno);
     }
 
 }
