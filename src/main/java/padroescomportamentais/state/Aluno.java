@@ -13,27 +13,27 @@ public class Aluno {
         this.estado = estado;
     }
     
-    public String matricular() {
+    public boolean matricular() {
         return estado.matricular(this);
     }
     
-    public String formar() {
+    public boolean formar() {
         return estado.formar(this);
     }
     
-    public String trancar() {
+    public boolean trancar() {
         return estado.trancar(this);
     }
     
-    public String jubilar() {
+    public boolean jubilar() {
         return estado.jubilar(this);
     }
     
-    public String evadir() {
+    public boolean evadir() {
         return estado.evadir(this);
     }
 
-    public String transferir() {
+    public boolean transferir() {
         return estado.transferir(this);
     }
 

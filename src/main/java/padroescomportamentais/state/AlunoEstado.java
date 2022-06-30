@@ -1,19 +1,31 @@
 package padroescomportamentais.state;
 
-public interface AlunoEstado {
+public abstract class AlunoEstado {
     
-    String getEstado();
-    
-    String matricular(Aluno aluno);
-    
-    String formar(Aluno aluno);
-    
-    String trancar(Aluno aluno);
-    
-    String jubilar(Aluno aluno);
-    
-    String evadir(Aluno aluno);
+    public abstract String getEstado();
 
-    String transferir(Aluno aluno);
+    public boolean matricular(Aluno aluno) {
+        return false;
+    }
+
+    public boolean formar(Aluno aluno) {
+        return false;
+    }
+
+    public boolean trancar(Aluno aluno) {
+        return false;
+    }
+
+    public boolean jubilar(Aluno aluno) {
+        return false;
+    }
+
+    public boolean evadir(Aluno aluno) {
+        return false;
+    }
+
+    public boolean transferir(Aluno aluno) {
+        return false;
+    }
     
 }

@@ -12,3 +12,4 @@ public class Escola {
         return interpretador.interpretar();
     }
 }
+

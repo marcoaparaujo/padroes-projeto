@@ -1,6 +1,6 @@
 package padroescomportamentais.state;
 
-public class AlunoEstadoEvadido implements AlunoEstado {
+public class AlunoEstadoEvadido extends AlunoEstado {
 
     private AlunoEstadoEvadido() {};
     private static AlunoEstadoEvadido instance = new AlunoEstadoEvadido();
@@ -11,30 +11,10 @@ public class AlunoEstadoEvadido implements AlunoEstado {
     public String getEstado() {
         return "Evadido";
     }
-    
-    public String matricular(Aluno aluno) {
-        return "Matrícula não realizada";
-    }
-    
-   public String formar(Aluno aluno) {
-        return "Formatura não realizada";
-    }
-   
-   public String trancar(Aluno aluno) {
-         return "Trancamento não realizado";
-   }
      
-   public String jubilar(Aluno aluno) {
+   public boolean jubilar(Aluno aluno) {
          aluno.setEstado(AlunoEstadoJubilado.getInstance());
-         return "Jubilamento realizado";
+         return true;
    }
-   
-   public String evadir(Aluno aluno) {
-         return "Evasão não realizada";
-   }
-
-    public String transferir(Aluno aluno) {
-        return "Transferência não realizada";
-    }
 }
 

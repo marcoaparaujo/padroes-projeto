@@ -15,7 +15,7 @@ class AlunoBuilderTest {
                     .setNome("Aluno 1")
                     .setEmail("aluno1@email.com")
                     .build();
-            fail();
+           fail();
         } catch (IllegalArgumentException e) {
             assertEquals("Matrícula inválida", e.getMessage());
         }
